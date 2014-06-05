@@ -31,7 +31,6 @@ struct cache_item_ {
 };
 
 struct mlru_ {
-	time_t seed;
 	uint32_t capacity;
 	uint32_t item_count;
 	uint64_t used_mem;

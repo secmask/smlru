@@ -60,7 +60,6 @@ mlru *mlru_create(uint32_t num_slots, uint64_t max_mem) {
 	cache->table = (cache_item**) mlru_alloc_mem(tabsize);
 	cache->max_mem = max_mem;
 	cache->capacity = num_slots;
-	cache->seed = time(NULL);
 	cache->used_mem = tabsize;
 	cache->item_count = 0;
 	return cache;
