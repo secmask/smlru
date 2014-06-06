@@ -95,6 +95,8 @@ void mlru_free(mlru* cache) {
 		mlru_free_mem(cache->free_cached);
 		cache->free_cached=NULL;
 	}
+	mlru_free_mem(cache->table);
+	mlru_free_mem(cache);
 }
 cache_item* linklist_detach_item(mlru* cache, cache_item* item) {
 	cache_item *pre = item->link_prev;
